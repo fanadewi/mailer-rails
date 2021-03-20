@@ -2,7 +2,7 @@ class BaseController < ApplicationController
     include Response
 
     def welcome
-        json_response(welcome_params)
+        json_response(message: "Hello #{welcome_params[:name]}!")
     end
 
     def sendMessage
